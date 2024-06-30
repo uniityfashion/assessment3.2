@@ -93,16 +93,16 @@ export default function HomePage() {
 
     return (
       <div>
-        <p>Your Account: {account}</p>
-        <p>Your Balance: {balance}</p>
+        <p>Account: {account}</p>
+        <p>Remaining Balance: {balance}</p>
         <input
           type="text"
           value={amount}
           onChange={(e) => setAmount(e.target.value)}
           placeholder="Enter amount"
         />
-        <button onClick={deposit}>Deposit ETH</button>
-        <button onClick={withdraw}>Withdraw ETH</button>
+        <button onClick={deposit}>Deposit</button>
+        <button onClick={withdraw}>Withdraw</button>
       </div>
     )
   }
@@ -111,16 +111,14 @@ export default function HomePage() {
 
   return (
     <main className="container">
-      <header><h1>ATM ready to use for you!</h1></header>
+      <header><h1>--Lets Transact--</h1></header>
       {initUser()}
       <style jsx>{`
         .container {
-          text-align: center
-          background-color: green
+          background-color: red
         }
         button {
-          background-color: red;
-          color: white;
+          background-color: blue
         }
       `}
       </style>
